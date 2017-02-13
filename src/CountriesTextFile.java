@@ -25,6 +25,29 @@ public class CountriesTextFile {
         }
     }
 
+    public boolean checkFile(String check) {
+        boolean isCopy = false;
+        try {
+            FileReader r = new FileReader(countriesFile);
+            BufferedReader in = new BufferedReader(r);
+
+            String line = in.readLine();
+
+            while (line != null) {
+                if (line.toLowerCase().equals(check.toLowerCase())) {
+                    isCopy = true;
+                }
+                line = in.readLine();
+            }
+
+            in.close();
+            r.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return isCopy;
+    }
+
     public void readFile() {
         try {
             FileReader r = new FileReader(countriesFile);

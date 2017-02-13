@@ -44,7 +44,13 @@ public class CountriesApp {
             }
             else if (userInput == 2) {
                 System.out.print("Enter country: ");
-                theFile.writeFile(validate.getString(sc));
+                String newCountry = validate.getString(sc);
+                if (!theFile.checkFile(newCountry)) {
+                    theFile.writeFile(validate.getString(sc));
+                }
+                else {
+                    System.out.println("That country already exists!");
+                }
             }
             else if (userInput == 3) {
                 System.out.print("Enter country to remove: ");
