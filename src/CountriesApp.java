@@ -17,7 +17,6 @@ public class CountriesApp {
             System.out.println("Please enter 1, 2, 3, or 4!");
             userInput = validate.getInt(sc);
         }
-
         return userInput;
     }
 
@@ -56,8 +55,6 @@ public class CountriesApp {
                 System.out.println("Goodbye!");
                 break;
             }
-
         }
     }
-
 }

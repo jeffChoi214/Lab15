@@ -19,8 +19,6 @@ public class CountriesTextFile {
 
             out.println(country);
             out.close();
-
-
         }
         catch (FileNotFoundException e) {
             System.out.println(e);
@@ -70,19 +68,10 @@ public class CountriesTextFile {
             for (int i = 0; i < countries.size(); ++i) {
                 out.println(countries.get(i));
             }
-            // out.flush();
             out.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
-
-
 }
